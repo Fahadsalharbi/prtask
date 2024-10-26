@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+    margin: 0; /* إلغاء الهوامش الافتراضية لجميع العناصر */
+    padding: 0; /* إلغاء الحشوة الافتراضية لجميع العناصر */
+}
+
+body {
+    font-family: 'Tajawal', sans-serif;
+    margin: 0;
+    background-color: #f4f4f400;
+    display: flex; /* استخدام flexbox */
+    flex-direction: column; /* ترتيب العناصر بشكل عمودي */
+    align-items: center; /* محاذاة العناصر إلى المنتصف */
+    justify-content: center; /* توسيط العناصر عموديًا */
+    height: 100vh; /* جعل ارتفاع الجسم هو 100% من ارتفاع النافذة */
+}
+
+header {
+    position: relative;
+    top: 0; /* تعيين الهيدر في الأعلى */
+    left: 0;
+    right: 0;
+    background-image: url('header.png'); /* مسار الصورة */
+    background-size: cover; /* ملء الخلفية بالصورة */
+    background-position: center;
+    background-repeat: no-repeat; /* عدم تكرار الصورة */
+    color: rgb(4, 4, 4); /* لون النص */
+    text-align: center; /* محاذاة النص إلى المنتصف */
+    padding: 20px 0; /* مساحة داخلية */
+    font-size: 24px; /* حجم الخط */
+    width: 100%; /* جعل الهيدر بعرض الصفحة */
+    margin: 0;
+}
+
+#page-title {
+    margin: 0; /* إلغاء الهوامش الافتراضية */
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px; /* مسافة بين الصورة ومربعات الإدخال */
+    margin-top: 20px; /* إضافة مسافة من الهيدر */
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.image {
+    width: 500px;
+    height: auto;
+    border: 1px solid #ddd;
+}
+
+.text-overlay {
+    position: absolute;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-shadow: 1px 1px 2px #fff;
+    direction: rtl;
+}
+
+#title-text {
+    font-size: 22px;
+    color: #CF3E3E;
+    top: 21%;
+}
+
+#content-text {
+    font-size: 18px;
+    top: 40%;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* محاذاة الأزرار إلى المنتصف */
+    margin-top: 15px;
+}
+
+input[type="text"] {
+    padding: 8px;
+    font-family: 'Tajawal', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    width: 400px;
+    margin-bottom: 10px;
+}
+
+textarea#content-input {
+    padding: 8px;
+    font-family: 'Tajawal', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    width: 400px; /* عرض النص */
+    height: 400px; /* ارتفاع أكبر للمحتوى */
+    margin-bottom: 10px;
+    resize: vertical; /* يسمح بتغيير الحجم عمودياً */
+    direction: rtl;
+}
+
+button {
+    padding: 10px 15px; /* المساحة الداخلية */
+    font-family: 'Tajawal', sans-serif;
+    font-size: 16px; /* حجم الخط */
+    font-weight: bold;
+    cursor: pointer; /* شكل المؤشر عند التمرير فوق الزر */
+    margin-top: 5px; /* المسافة من العناصر الأخرى */
+    background-color: #FFB74D; /* لون الخلفية */
+    color: white; /* لون النص */
+    border: none; /* إزالة الحدود الافتراضية */
+    border-radius: 5px; /* زوايا مستديرة */
+    transition: background-color 0.3s, transform 0.3s; /* تأثير الانتقال */
+}
+
+/* تأثير عند التمرير */
+button:hover {
+    background-color: #ea8f06; /* لون خلفية مختلف عند التمرير */
+    transform: translateY(-2px); /* تأثير رفع الزر عند التمرير */
+}
+
+/* تأثير عند الضغط */
+button:active {
+    transform: translateY(0); /* يعيد الزر لوضعه الأصلي عند الضغط */
+}
+
+/* إخفاء العناصر عند الطباعة */
+@media print {
+    #controls, header {
+        display: none;
+    }
+}

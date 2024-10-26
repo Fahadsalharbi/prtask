@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قصاصة سمو الأمير</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 id="page-title">نموذج قصاصة سمو الأمير حفظه الله</h1> <!-- عنوان الصفحة -->
+    </header>
+    <div class="container">
+        <div class="image-container">
+            <img src="design.png" alt="صورة" class="image">
+            <div class="text-overlay" id="title-text"></div>
+            <div class="text-overlay" id="content-text"></div>
+        </div>
+        <div class="controls" id="controls">
+            <input type="text" id="title-input" placeholder="أدخل العنوان">
+            <textarea id="content-input" placeholder="أدخل المحتوى"></textarea>
+            <button onclick="printImage()">طباعة</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
