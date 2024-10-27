@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <h1 id="page-title">نموذج قصاصة سمو الأمير حفظه الله</h1> <!-- عنوان الصفحة -->
+        <h1 id="page-title">نموذج قصاصة سمو الأمير حفظه الله</h1>
     </header>
     <div class="container">
         <div class="image-container">
@@ -20,6 +20,14 @@
         <div class="controls" id="controls">
             <input type="text" id="title-input" placeholder="أدخل العنوان">
             <textarea id="content-input" placeholder="أدخل المحتوى"></textarea>
+
+            <!-- خيارات تخصيص المحتوى -->
+            <label for="text-color">لون نص المحتوى:</label>
+            <input type="color" id="text-color" name="text-color">
+
+            <label for="text-size">حجم نص المحتوى:</label>
+            <input type="number" id="text-size" name="text-size" min="10" max="100" placeholder="حجم النص">
+
             <button onclick="printImage()">طباعة</button>
         </div>
     </div>
